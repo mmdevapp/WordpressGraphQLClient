@@ -1,6 +1,6 @@
 import { ApolloClient, gql, NormalizedCacheObject } from "@apollo/client";
-import { GraphQLQueryBuilder, FragmentContent } from "./GraphQLQueryBuilder";
-import { RecursiveGraphQLStructure } from "./GraphQLQueryBuilder"
+import { GraphQLQueryBuilder, FragmentContent } from "./GraphQLQueryBuilder.js";
+import { RecursiveGraphQLStructure } from "./GraphQLQueryBuilder.js"
 export class WordPressFetch {
     client: ApolloClient<NormalizedCacheObject>
     pageFields: (string | Record<string, any>)[]
