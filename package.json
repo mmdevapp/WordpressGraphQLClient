@@ -1,0 +1,22 @@
+{
+  "name": "wordpressgraphqlclient",
+  "version": "1.0.0",
+  "description": "utility for fetching and managing WordPress data using GraphQL.",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmdevapp/WordpressGraphQLClient.git"
+  },
+  "author": "Martin Michel <martin@mmdev.app>",
+  "license": "SEE LICENSE IN <filename>",
+  "bugs": {
+    "url": "https://github.com/mmdevapp/WordpressGraphQLClient/issues"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.8"
+  },
+  "homepage": "https://github.com/mmdevapp/WordpressGraphQLClient#readme"
+}
