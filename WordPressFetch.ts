@@ -1,4 +1,3 @@
-import { apolloClient, apolloClientNoCache } from "../apollo";
 import { ApolloClient, gql, NormalizedCacheObject } from "@apollo/client";
 import { GraphQLQueryBuilder, FragmentContent } from "./GraphQLQueryBuilder";
 import { RecursiveGraphQLStructure } from "./GraphQLQueryBuilder"
@@ -6,7 +5,7 @@ export class WordPressFetch {
     client: ApolloClient<NormalizedCacheObject>
     pageFields: (string | Record<string, any>)[]
     editorBlocks: FragmentContent[] // Update the type here
-    constructor() {
+    constructor(apolloClient: ApolloClient<NormalizedCacheObject>) {
         this.client = apolloClient;
         this.pageFields = ['id', { editorBlocks: ['...pageBlocks'] }];
         this.editorBlocks = [];
