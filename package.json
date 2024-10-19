@@ -1,6 +1,6 @@
 {
   "name": "wordpressgraphqlclient",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utility for fetching and managing WordPress data using GraphQL.",
   "main": "index.tsx",
   "scripts": {
