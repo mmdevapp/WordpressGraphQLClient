@@ -41,57 +41,24 @@ wpClient.fetchNodeByUri('/sample-page').then(page => {
 ```
 
 #### `registerGutenbergBlock(blockName: string, fields: RecursiveGraphQLStructure)`
-
-Registers a Gutenberg block with specified fields to be included in the GraphQL queries. Here's an example of registering a gallery block:
+Registers a Gutenberg block with specified fields to be included in the GraphQL queries. Here's an example of registering a core/paragraph block:
 
 ```javascript
-const galleryBlockFields = {
-    blockname: 'AcfGallery',
+const paragraphBlockFields = {
+    blockname: 'core/paragraph',
     blockContent: [
         {
             attributes: [
-                'className',
-            ],
-            gallery: [
-                'headline',
-                {
-                    photos: [
-                        {
-                            thumbnail: {
-                                node: [
-                                    'altText',
-                                    'mediaItemUrl',
-                                    {
-                                        mediaDetails: [
-                                            'height',
-                                            'width',
-                                        ],
-                                    },
-                                ],
-                            },
-                        },
-                        {
-                            picture: {
-                                node: [
-                                    'altText',
-                                    'mediaItemUrl',
-                                    {
-                                        mediaDetails: [
-                                            'height',
-                                            'width',
-                                        ],
-                                    },
-                                ],
-                            },
-                        },
-                    ],
-                },
+                'content',
+                'align',
+                'dropCap',
             ],
         } as RecursiveGraphQLStructure,
     ],
 };
 
-wpClient.registerGutenbergBlock(galleryBlockFields.blockname, galleryBlockFields.blockContent);
+wpClient.registerGutenbergBlock(paragraphBlockFields.blockname, paragraphBlockFields.blockContent);
+
 ```
 
 #### `fetchPageById(id: string)`
